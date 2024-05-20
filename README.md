@@ -5,11 +5,13 @@ LaTex Template for Mini-Project
 
 One day you'll find out that [overleaf](https://www.overleaf.com) is bullsh*t and useless without premium subscription. So, you need to learn how to use LaTeX in your local machine. This repo is a simple starter template for your mini-project report. 
 
-100% offline
-100% local machine
-100% free & open source
+> 100% offline ✅
 
-For collabration, just use git.
+> 100% local machine ✅
+
+> 100% free & open source ✅
+
+For collabration, just use git alongside with your fav IDE.
 
 ## Cloning & Installation
 
