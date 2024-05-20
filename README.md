@@ -1,4 +1,4 @@
-<b><h1 align="center"> *Department of<br>Artificial Intelligence & Data Science<br>Project LaTeX Files* </h1></b>
+<b><h1 align="center"> *Department of<br>Artificial Intelligence & Data Science<br><br>Project LaTeX Files and Instructions* </h1></b>
 
 ## Objective
 
@@ -12,7 +12,7 @@ One day you'll find out that [overleaf](https://www.overleaf.com) is bullsh*t an
 
 For collabration, just use git alongside with your fav IDE.
 
-## Setting Up LaTeX locally
+## Setting Up LaTeX and VS Code locally
 
 1. Install miktex from [miktex.org](https://miktex.org/download) or [latex-project.org](https://www.latex-project.org/get/)
 
@@ -24,6 +24,8 @@ For collabration, just use git alongside with your fav IDE.
 
 
 ## Usage
+
+On the terminal
 
 1. Clone this repo using git
 
@@ -42,6 +44,7 @@ cd LaTeX-SJCET-AD
 ```
 code .
 ```
+_Now in VS Code_
 
 4. Select the `src/<project_name>/thesis.tex` file
 
@@ -49,7 +52,7 @@ code .
 
 6. Enter & wait
 
-> Or just use the extension `TEX` from activity bar
+> Or just use the `TEX` extension from activity bar
 
 7. If build is successfull, new `thesis.pdf` will be created/updated
 
