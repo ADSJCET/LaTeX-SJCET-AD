@@ -3,8 +3,8 @@
 *A citation (or reference) uniquely identifies a source of information, it usually has two parts. In the first part, each section of text that is either based on, or quoted from, an outside source is marked as such with an `inline citation`. This is usually displayed as a superscript footnote number: [1]. The second necessary part of the citation or reference is the `list of full references`, which provides complete, formatted detail about the source, so that anyone reading the article can find it and verify it. -- From [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Citing_sources)*
 
 While giving citation we have two methods:
-1. Giving the citation manually by writing the number and the list of references in a specific format, It is recommended only for very short articles as it need heavy manual work if you need to insert some citation in between other citations, This site was followed in [Mini Project Template](https://github.com/ADSJCET/LaTeX-SJCET-AD/blob/main/src/ref.tex).
-2. Giving the citation with automatic numbering using Bibtex. This method is followed in [Main Project Template(Phase 2) CHANGE LINK](https://github.com/ADSJCET/LaTeX-SJCET-AD/blob/main/src/ref.tex). We are discussing this method here.
+1. Giving the citation manually by writing the number and the list of references in a specific format, It is recommended only for very short articles as it need heavy manual work if you need to insert some citation in between other citations, this citation technique was followed in [Mini Project Template](https://github.com/ADSJCET/LaTeX-SJCET-AD/blob/main/src/Mini%20Project/ref.tex).
+2. Giving the citation with automatic numbering using Bibtex. This method is followed in [Main Project Template(Phase 2)](https://github.com/ADSJCET/LaTeX-SJCET-AD/tree/main/src/Main%20Project%20Phase%202). We are discussing this method here.
 
 ## Process
 
@@ -37,7 +37,7 @@ A typical BIBTEX look like this (Paper: Attention Is All You Need, Introduced Tr
 3. Paste the BIBTEX on your `.bib` file.
 4. On the first line of your BIBTEX(here `@misc{vaswani2023attention,`) you may change the `vaswani2023attention` to a name you like to call the paper, eg: `transf_paper`. 
 5. Go to you main document TeX file, like chapter.tex or thesis.tex and type `\cite{<your_paper_name>}`(here `\cite{transf_paper}`) to cite the paper in your document.
-6. See example at [Main Project Chapter 1, line 116 CHANGE LINK](https://ieeexplore.ieee.org/Xplore/home.jsp)
+6. See example at [Main Project Introduction, line 56](https://github.com/ADSJCET/LaTeX-SJCET-AD/blob/main/src/Main%20Project%20Phase%202/1_Intro.tex#L56)
 7. After re-building the project, you will see the citation and list of references like you see in Research Papers.
 
 NOTE: 
