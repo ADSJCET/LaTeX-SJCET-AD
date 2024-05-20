@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                               % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{dmathesis}
+%% uncommand the following line to print equation labels next to
+%% equation numbers. 
+% \usepackage{showlabel}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{listings} % Required for code listing
+% \usepackage{color,soul}
+% \usepackage[dvipsnames]{xcolor}
+
+% Define code listing settings
+\lstset{
+    language=Python, % Set language
+    basicstyle=\ttfamily\small, % Set font style and size
+    breaklines=true, % Enable automatic line breaking
+    keywordstyle=\color{blue}, % Set keyword color
+    stringstyle=\color{red}, % Set string color
+    commentstyle=\color{green!60!black}, % Set comment color
+    numbers=left, % Line numbers on left
+    numberstyle=\tiny\color{gray}, % Line number style
+    % backgroundcolor=\color{lightgray!20}, % Background color
+    captionpos=b, % Caption position: bottom
+    tabsize=4, % Tab size
+    showspaces=false, % Don't show spaces
+    showstringspaces=false, % Don't show spaces in strings
+}
+
+%% The following is to control the format of your thesis
+\input{format}
+
+%% File to be included while running latex.
+\includeonly{1_Intro, 2_Lit_Rev, 3_Prop_Meth, 4_Res_Dis, 5_Conclusion, 6_Project_Outreach, 7_Ref, 8_Vision_Mission}
+
+\begin{document}
+%% Front page of thesis
+\input{frontpage}
+%% Main text
+% set page number starts from 1
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%% To ensure the equation counter works correctly
+\eqlabon
+\eqlaboff
+
+\include{1_Intro}
+\include{2_Lit_Rev}
+\include{3_Prop_Meth}
+\include{4_Res_Dis}
+\include{5_Conclusion}
+\include{6_Project_Outreach}
+\include{7_Ref}
+\include{8_Vision_Mission}
+
+\end{document}

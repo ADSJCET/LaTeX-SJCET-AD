@@ -1,0 +1,148 @@
+\chapter{Literature Review}
+
+% Fully Convolutional Networks (FCN)
+% Long Short-Term Memory (LSTM)
+% Deep Deterministic Policy Gradient (DDPG)
+% Asymmetric Bilateral Motion Estimation (ABME)
+
+\nomenclature{FCN}{Fully Convolutional Networks}
+
+\nomenclature{LSTM}{Long Short-Term Memory}
+
+\nomenclature{DDPG}{Deep Deterministic Policy Gradient}
+
+\nomenclature{ABME}{Asymmetric Bilateral Motion Estimation}
+
+%  ------------------------------------------------------------------
+
+ \noindent
+The literature review provides a thorough overview of current techniques and challenges in automatically segmenting and labeling objects in videos. The review highlights trends like incorporating temporal information and attention mechanisms. It also covers advancements in deep learning and motion tracking while emphasizing the importance of diverse datasets.
+
+\setcounter{equation}{0}
+\setlength{\parskip}{3ex}
+
+\begin{enumerate}
+
+\item \textbf{Video object segmentation and tracking: A survey}\cite{main_paper}
+
+The paper addresses challenges like fast motion and real-time processing in videos by combining segmentation and tracking. Challenges remain, such as issues with low-resolution videos and motion blur, affecting accuracy and flexibility in handling different object shapes.\\
+
+% --------------------------- x ---------------------------
+
+\item \textbf{Deep Learning for Semantic Segmentation of Unmanned Aerial Vehicle Videos}\cite{1}
+
+The paper proposes a model that combines Fully Convolutional Networks (FCN) and Long Short-Term Memory (LSTM) for segmentation. FCN handles each video frame on its own, while LSTM refines the results using temporal information from consecutive frames. However, accuracy is affected by noise in the frames, and performance drops with resized images.
+
+% --------------------------- x ---------------------------
+
+\item \textbf{Video instance segmentation.}\cite{2}
+
+The paper introduces YouTube-VIS, a big dataset for video instance segmentation, and suggested MaskTrack R-CNN for the job. However, it faces challenges when connecting objects, especially with things like overlapping and fast motion.\\
+
+\item \textbf{Video Object Segmentation by Latent Outcome Regression}\cite{9}
+
+The paper suggestes an unsupervised method where weights and outcomes are optimized together through iterations. The weight learning and segmentation inference work together to enhance quality, adjusting based on specific characteristics. However, a drawback is the extra time taken by the aggregation algorithm, making it slower, and less consistent.\\
+
+% --------------------------- x ---------------------------
+
+\item \textbf{Semi-Supervised Video Object Segmentation Based on Local and Global Consistency Learning}\cite{5}
+
+The paper utilizes more unlabeled frames to enhance robustness and generalization, considering both local and global video information. Achieved reduced complexity and memory usage, resulting in excellent segmentation and high prediction speed. However, the model's accuracy was somewhat insufficient (around 68\%), primarily tested on a limited number of samples.\\
+
+% --------------------------- x ---------------------------
+
+\item\textbf{Unsupervised Video Object Segmentation via Weak User Interaction and Temporal Modulation}\cite{10}
+
+The paper incorporates a basic rectangle drawn around a person in the first frame to guide segmentation. Employs ETM and CTM modules for temporal information, boosting segmentation accuracy. However, struggles with tiny component contours in fast sequences and has limited learning ability for background areas.\\
+
+% --------------------------- x ---------------------------
+
+\clearpage
+
+\item \textbf{Deep Learning for Object Detection and Segmentation in Videos: Toward an Integration With Domain Knowledge}\cite{11}
+
+The paper explores the differences between a two-stage and one-stage approach in CNN-based image object detectors, employing methods like optical flow, tracking, LSTM, GRU, self-attention mechanisms, and generative learning. Identified gaps in terms of data scarcity, generalizability, indistinguishable outputs, and a lack of reasoning in the results. 
+\\
+
+% --------------------------- x ---------------------------
+
+ \item \textbf{A Reinforcement Learning Based Adaptive ROI Generation for Video Object Segmentation}\cite{12}
+
+The paper explores ZVOS (Zero-Shot Video Object Segmentation), a unified RL framework using the Deep Deterministic Policy Gradient (DDPG) algorithm and a group co-attention mechanism. Identified a challenge in accurately distinguishing main objects from intricate backgrounds in the absence of prior object information.\\ 
+
+% --------------------------- x ---------------------------
+ 
+ \item \textbf{Spatio-Temporal Self-Attention Network for Fire Detection and Segmentation in Video Surveillance}\cite{13}
+
+The paper develops a new method for fire detection in two stages, incorporating a spatial-temporal network. Applied self-attention to discriminative Spatio-Temporal features for improved segmentation masks. Created a video dataset with manually generated ground-truth segmentation masks. Challenges include the arbitrary shapes and sizes of fires, making learning more difficult, and the absence of large datasets with fire and ground-truth segmentation masks.
+\\
+
+% --------------------------- x ---------------------------
+
+\item \textbf{Adaptive Template and Transition Map for Real-Time Video Object Segmentation}\cite{14} 
+
+This paper creates a lightweight semi-VOS model using two template matching methods: short-term for localization and long-term for fine mask generation. Introduced a transition map for an auxiliary loss to correct mis-estimated pixels from previous frames, preventing error propagation. Identified a challenge when the target object disappears due to occlusion, causing performance degradation.
+
+% --------------------------- x ---------------------------
+
+\item \textbf{The 2019 DAVIS Challenge on VOS: Unsupervised Multi-Object Segmentation}\cite{3}
+
+The paper announces the third edition of the DAVIS Challenge series, introducing a new unsupervised multi-object track for video object segmentation. To support the unsupervised track, they've re-annotated existing sets and added new ones. The approach involves suggesting object proposals on each image without human supervision, prioritizing object semantics over motion patterns. Challenges include the demand for more accurate methods, improved evaluation metrics, and recognizing limitations in their annotation approach. The authors express the need for more diverse datasets to advance the field.
+
+% --------------------------- x ---------------------------
+  
+\item \textbf{Self-Supervised Deep TripleNet for Video Object Segmentation}\cite{6}
+
+The paper introduces a self-supervised deep TripleNet model for video object segmentation, capable of learning from unlabeled video data. The model comprises two modules: the temporal motion module captures motion patterns between frames, and the appearance matching module generates segmentation masks based on the reference frame and its corresponding mask. This self-supervised learning approach eliminates the need for pixel-level annotations, making it more efficient than traditional methods. However, challenges include potential performance issues in complex backgrounds or varying lighting conditions and a limitation in generalizing to new datasets. The paper doesn't delve into the computational complexity, posing a consideration for real-time applications.
+
+% --------------------------- x ---------------------------
+
+\item \textbf{Asymmetric Bilateral Motion Estimation for Video Frame Interpolation}\cite{7}
+
+The paper introduces a new method called Asymmetric Bilateral Motion Estimation (ABME) to improve traditional video frame interpolation. ABME refines motion vectors for better accuracy, especially in dealing with challenges like occlusions and non-linear object motions. The paper aims to overcome limitations in traditional methods related to symmetric bilateral motion vectors, which struggle with occlusions and non-linear motions. However, challenges with ABME might include the complexity of refining motion vectors and how well it handles complex motion patterns and real-world occlusions. The paper may not extensively discuss the practical limitations or failure cases of ABME, which could be crucial for understanding its usefulness.
+
+% --------------------------- x ---------------------------
+ 
+\item \textbf{Video Frame Interpolation Based on Symmetric and Asymmetric Motions}\cite{8}
+
+They propose a novel video frame interpolation network that incorporates both symmetric and asymmetric motion-based warping modules, addressing both linear and non-linear motions, as well as occlusions effectively. The symmetric warping module estimates symmetric motions to generate intermediate frames, while the asymmetric one predicts asymmetric motions to handle non-linear motions and occlusion problems. By combining the results from both modules, they achieve a more reliable reconstruction of intermediate frames. Additionally, they introduce a frame synthesis network to refine the combined warping results. Experimental results demonstrate that their proposed network outperforms state-of-the-art video interpolation algorithms, showcasing the effective complementary operation of the two types of warping modules across various benchmark datasets.
+
+%\item \textbf{,,,}
+%\item \textbf{,,,,,)}\\
+%\item \textbf{,,,}
+%\item \textbf{,,,,,,}
+%\item \textbf{,,,,,}        
+%\item  \textbf{,,,,,}
+         
+\end{enumerate}
+
+\newpage
+
+\section{Survey Summary}
+
+\noindent
+These papers explore ways to understand and process videos. \cite{main_paper} combines segmentation and tracking but struggles with low-quality videos. \cite{1} on UAV videos uses FCN and LSTM but has accuracy issues with noisy frames. \cite{2} deals with video instance segmentation, facing challenges with connecting objects during fast motion.
+
+\noindent
+\cite{9} suggests an unsupervised method for video object segmentation but is slower and less consistent. \cite{5} works with semi-supervised video object segmentation, achieving good results but not perfect accuracy.
+
+\noindent
+\cite{10} introduces unsupervised video object segmentation, making it more accurate but facing challenges in fast sequences. \cite{11} compares two approaches in deep learning for object detection, pointing out gaps in data and generalization.
+
+\noindent
+\cite{12} explores ZVOS with reinforcement learning, dealing with challenges in distinguishing objects from complex backgrounds. \cite{13} introduces a network for fire detection, handling challenges related to different fire shapes. \cite{14} tackles real-time video object segmentation, considering issues in occlusion scenarios.
+
+\noindent
+\cite{3} announces a challenge for video segmentation, highlighting the need for accurate methods. \cite{6} introduces a self-supervised model for video object segmentation, removing the need for detailed annotations.
+
+\noindent
+\cite{7} and \cite{8} focus on improving motion estimation and video frame interpolation, handling challenges like occlusions. However, more exploration is needed for practical limitations.
+
+\noindent
+In summary, these papers contribute to making sense of videos, but each approach has its own challenges, showing that there's more work to do in this area. All these applications work in real-time, which is difficult to implement. Also, the model detection is not producing accurate results thus affecting the performance. Our work will be focused on resolving all these issues.
+
+
+
+
+
+

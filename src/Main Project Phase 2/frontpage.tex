@@ -1,0 +1,170 @@
+\pagenumbering{roman}
+%\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\fancypagestyle{plain}{%
+\fancyfoot[R]{}
+\renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newpage
+\thispagestyle{empty}
+\begin{center}
+  {\large \bf PROJECT PHASE 2 REPORT}\\
+ON\\
+  \vspace{0.5 cm}
+  {\LARGE \bf Concatenation of Attention Enhanced}\\ 
+  \vspace{2mm}
+  {\LARGE \bf Spatial and Temporal Features for}\\
+  \vspace{2mm}
+  {\LARGE \bf Violence Detection from Videos}\\
+   \vspace{0.5 cm}
+   \large Submitted by\\
+   { \bf Ajay T Shaju (SJC20AD004)}\\
+   { \bf Emil Saj Abraham (SJC20AD028)}\\
+   { \bf Justin Thomas Jo (SJC20AD046)}\\
+   { \bf Vishnuprasad K G (SJC20AD063)}\\[-0.6mm]
+  {\large to\\[-0.6mm] the APJ Abdul Kalam Technological University\\[-0.6mm] in partial fulfillment of the requirements for the award of the degree\\[-0.6mm] of\\[-0.6mm] Bachelor of Technology\\[-0.6mm] in\\[-0.6mm] {\bf Artificial Intelligence and Data Science}}
+  
+  % Put your university logo here if you wish.
+   \begin{center}
+   \includegraphics[width=0.3\textwidth]{Images/SJCET_logo.png}
+   \end{center}
+
+  {\large {\bf Department of Artificial Intelligence and Data Science}\\
+          [-3mm] {\bf St. Joseph's College of Engineering and Technology, Palai}\\
+           [1mm]  May : 2024}
+
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%           The abstract page         %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\numberline{}Declaration}
+\begin{center}
+  \vspace*{1cm}
+  \textbf{\large Declaration}
+\end{center}
+We undersigned hereby declare that the project phase 2 report on {\bf“Concatenation of Attention Enhanced Spatial and Temporal Features for Violence Detection from Videos”}, submitted for partial fulfillment of the requirements for the award of the degree of Bachelor of Technology of the APJ Abdul Kalam Technological University, Kerala, is a bonafide work done by us under the supervision of {\bf Dr. Renjith Thomas}. This submission represents our ideas in our own words and where ideas or words of others have been included. We have adequately and accurately cited and referenced the original sources. We also declare that we have adhered to the ethics of academic honesty and integrity and have not misrepresented or fabricated any data, idea, fact, or source in our submission. We understand that any violation of the above will be a cause for disciplinary action by the institute and/or the University and can also evoke penal action from the sources which have thus not been properly cited or from whom proper permission has not been obtained. This report has not been previously formed the basis for the award of any degree, diploma, or similar title of any other University. 
+\vspace{1.3 cm} \\
+{{\bf Name and Signature of Students}\vspace{0.5 cm}\\
+{ \bf Ajay T Shaju (SJC20AD004)}\\
+{ \bf Emil Saj Abraham (SJC20AD028)}\\
+{ \bf Justin Thomas Jo (SJC20AD046)}\\
+{ \bf Vishnuprasad K G (SJC20AD063)}\\[-0.6mm] \\\\\\
+Place: Choondacherry\\ 
+Date: 03-05-2024
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% The dedication page, of you have one  %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\begin{center}
+\normalsize{ST. JOSEPH’S COLLEGE OF ENGINEERING AND TECHNOLOGY, PALAI}\\[0.5cm]
+\normalsize
+ { DEPARTMENT OF ARTIFICIAL INTELLIGENCE AND DATA SCIENCE}\\[1.0cm]% Put your university logo here if you wish.
+   \begin{center}
+   \includegraphics[width=0.3\textwidth]{Images/SJCET_logo.png}
+   \end{center}
+{\large CERTIFICATE}\\[1cm]
+\end{center}
+\normalsize 
+
+\justifying This is to certify that the report entitled {\bf $``$Concatenation of Attention Enhanced Spatial and Temporal Features for Violence Detection from Videos$"$} submitted by { \bf Ajay T Shaju (SJC20AD004), Emil Saj Abraham (SJC20AD028), Justin Thomas Jo (SJC20AD046), and Vishnuprasad KG (SJC20AD063)} to the APJ Abdul Kalam Technological University in partial fulfillment of the requirements for the award of the Degree of Bachelor of Technology in Artificial Intelligence and Data Science is a bonafide record of the project work carried out by them under my guidance and supervision.\vspace{0.9 cm}\\
+{\bf Project Guide}\hspace{8.3 cm}{\bf Project Coordinator}\\
+Dr.Renjith Thomas\hspace{7.6 cm} Mr.Jacob Thomas\\
+Head of the Department\hspace{6.85 cm}Assistant Professor\hspace{2.6 cm}\\Department of AD\hspace{7.9 cm}Department of AD
+\vspace{1.3 cm}\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{flushleft}
+\setlength{\leftskip}{0pt} % Adjust the left margin
+\vspace{0.05 cm}
+Place: Choondacherry \\
+Date: 03-05-2024
+\end{flushleft}
+\end{minipage}%
+\begin{minipage}[t]{0.49\textwidth}
+\begin{flushright}
+\begin{tabular}{l}
+\textbf{Head of Department} \\
+Dr.Renjith Thomas \\
+Associate Professor \\
+Department of AD
+\end{tabular}
+\end{flushright}
+\end{minipage}
+                
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%           The abstract page         %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\numberline{}Acknowledgement}
+\begin{center}
+  \vspace*{1cm}
+  \textbf{\large Acknowledgement}
+\end{center}
+The success and final outcome of this project phase 2 required a lot of guidance and assistance from many people, and we are extremely privileged to have received their support throughout the completion of this project. We would like to express our respect and gratitude to the management of St. Joseph’s College of Engineering and Technology for providing us with the opportunity and platform to work on this project. A special word of thanks goes to our beloved Principal, \textbf{Dr. V. P. Devassia}, for providing invaluable support and necessary facilities to carry out this project. We are extremely indebted to our project guide \textbf{Dr. Renjith Thomas}, Associate Professor \& Head of the Department of Artificial Intelligence and Data Science, for his valuable suggestions and encouragement throughout the course of this project. His keen interest and guidance in this project provided us with all the necessary information for developing a robust system. We would also like to express our gratitude to our project coordinator, \textbf{Mr. Jacob Thomas}, Assistant Professor in the Department of Artificial Intelligence and Data Science, for his valuable suggestions and guidelines during the entire duration of this project. We truly appreciate his contributions and technical support in preparing this report.
+
+\noindent
+We also extend our thanks to Dr.Deepa V, Assistant Professor, School of AI and Robotics, MG University, Kottayam, Mr. Milton John, Software Engineer, Amazon Bengaluru, and Mr. Sandeep C George, Senior Safety Officer, ThyssenKrupp Abu Dhabi for their amazing thoughts, help, and recommendations. Also, we thank all our friends, and teaching and non-teaching staff members of the Department of Artificial Intelligence and Data Science who have offered unparalleled help in needful times. All of these people have played a crucial role in the successful completion of our project phase 2 work.  \\
+
+\begin{flushright}
+    Ajay T Shaju
+    
+    Emil Saj Abraham
+    
+    Justin Thomas Jo
+    
+    Vishnuprasad KG
+\end{flushright}
+
+
+
+% The success and final outcome of this project phase 2 required a lot of guidance and assistance from many people, and we are extremely privileged to have received their support throughout the completion of this project. All that we have accomplished is only possible due to their supervision and assistance, and we are sincerely grateful to them. We would like to express our respect and gratitude to the management of St. Joseph’s College of Engineering and Technology for providing us with the opportunity and platform to work on this project. A special word of thanks goes to our beloved Principal, \textbf{Dr. V. P. Devassia}, for providing invaluable support and necessary facilities to carry out this project. We are extremely indebted to our project guide \textbf{Dr. Renjith Thomas}, Associate Professor \& Head of the Department of Artificial Intelligence and Data Science, for his valuable suggestions and encouragement throughout the course of this project work. His keen interest and guidance in this project provided us with all the necessary information for developing a robust system. We would also like to express our gratitude to our project coordinator, \textbf{Mr. Jacob Thomas}, Assistant Professor in the Department of Artificial Intelligence and Data Science, for his valuable suggestions and guidelines during the entire duration of this project. We truly appreciate his contributions and technical support in preparing this report.
+
+% \noindent
+% We also extend our thanks to Dr.Deepa V, Assistant Professor School of Artificial Intelligence and Robotics, MG University, Kottayam, Mr. Milton John, Software Engineer, Amazon, Bengaluru, and Mr. Sandeep C George, Senior Safety Officer, ThyssenKrupp, Abu Dhabi for their amazing thoughts, help, and recommendations. Also, we thank all our friends, and teaching and non-teaching staff members of the Department of Artificial Intelligence and Data Science who have offered unparalleled help in needful times. All of these people have played a crucial role in the successful completion of our project phase 2 work.  \\
+
+% \begin{flushright}
+%     Ajay T Shaju
+    
+%     Emil Saj Abraham
+    
+%     Justin Thomas Jo
+    
+%     Vishnuprasad KG
+% \end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%           The abstract page         %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+\begin{center}
+  \vspace*{1cm}
+  \textbf{\Large Abstract}
+\end{center}
+
+\noindent The escalation of violence and disturbances in public areas like the stampede on the CUSAT Campus of Kerala, necessitates advancements in surveillance technology to ensure safety and security. The project titled \textbf{\textit{``Concatenation of Attention Enhanced Spatial and Temporal Features for Violence Detection from Videos"}} addresses this need by developing a deep learning model that effectively combines spatial and temporal information for accurate violence detection in video feeds. Utilizing the MobileNetV2 architecture as a feature extractor Convolutional Neural Network (CNN), enhanced with a spatial attention mechanism, the model focuses on important spatial features in video frames to identify violent actions. To capture the movement and changes over time, which are necessary for detecting violence, the model integrates a Long-Short Term Memory (LSTM) network that processes information from both global average and max pooling layers. This approach not only improves the detection accuracy but also helps the model adapt to different scenarios and camera angles through data augmentation techniques. The training process is carefully managed with strategies such as early stopping, adaptive learning rate adjustments, and model checkpointing to optimize performance, prevent overfitting, and enable retraining. Thus embracing innovative AI approaches to provide lightweight, fast, and efficient model for monitoring systems with the capability to detect violent behaviors quickly and reliably, thereby contributing to a safer Earth for everyone.
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\numberline{}List of Abbreviations}
+\printnomenclature
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\numberline{}List of Figures}
+\listoffigures
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\numberline{}List of Tables}
+\listoftables
+\clearpage
+\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%   END OF FRONT PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

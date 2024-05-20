@@ -1,0 +1,77 @@
+\chapter{Conclusion}
+
+\setcounter{equation}{0}
+% \section{Conclusion}
+\noindent In the domain of human activity detection, particularly in identifying instances of violence, combating overfitting presents a significant challenge, even with the utilization of large and deep layered models\cite{overfit}. This challenge primarily occurred due to the complex nature of the model itself and the extraction of irrelevant features during training. To address this issue, the project undertook the development of a network with a less complicated architecture compared to existing models.\\
+\noindent By employing a simpler architecture, the proposed network can be effectively trained on systems with standard specifications, eliminating the necessity for high-end computing resources. Moreover, we integrated additional mechanisms such as spatial attention, global average pooling, and global max pooling to augment the model's capability to extract relevant features while reducing the risk of overfitting.\\
+\noindent The accuracy of the proposed model aligns closely with existing systems, the noteworthy accomplishment lies in the significant reduction of overfitting. Furthermore, the model architecture was carefully designed to prioritize computational efficiency and resource utilization\cite{comp_efficiency}. This strategic approach enables seamless deployment on edge devices with limited processing power, such as surveillance cameras, facilitating precise classification between violent and non-violent activities.
+
+\clearpage
+
+\noindent Finally, the proposed approach has made substantial progress towards achieving the project's objectives of developing a lightweight, faster, and compact model capable of accurately distinguishing between violent and non-violent activities. Through a combination of simplified architecture, feature enhancement mechanisms, and a focus on computational efficiency, the proposed model represents a promising solution for real-world deployment in scenarios where resource constraints are a primary concern.
+ 
+%\begin{figure}
+    %\centering
+    %\includegraphics[width=1\textwidth, height=0.50\textheight]{sq.png}
+    %\caption{Sequence diagram}
+%\end{figure}
+
+\section{Future Scope}
+
+The future of violence detection using AI holds significant promise and potential for advancements in several key areas:
+
+\begin{itemize}
+
+    \item \textbf{Audio-Visual Cues Integration:} By combining visual and auditory information, these systems can better understand violent incidents, improving accuracy and reliability. The model that detects child violence from voice variation is an example.\cite{child_violence}
+
+    \item \textbf{Predictive Classification:} Implementing a method that can identify the likelihood of violence on a per-frame basis before the violence has occurred and caused any harm by localizing the regions of the frame or the violent people in view.\cite{SepConvLSTM}
+
+    \item \textbf{Security and Law Enforcement Alert:} Violence detection systems can be integrated with emergency services, such as police dispatch centers or emergency call centers. When a violent incident is detected, the system can automatically generate an alert and relay relevant information to dispatchers.
+
+    \item \textbf{Privacy-Preserving Solutions:} As privacy concerns continue to grow, there is a need for AI-driven violence detection solutions that respect individuals' privacy rights. Future research may explore privacy-preserving techniques, such as federated learning\cite{Federated_Learn} and differential privacy, to ensure sensitive data remains secure and confidential.
+
+\clearpage
+
+    \item \textbf{Detecting Violent Activities Involving Weapons:} Continuous evaluation of additional standard datasets should encompass a broader range of violent activities, including those involving weapons\cite{lstm&bilstm}, which present unique challenges for detection algorithms due to their concealment and potential variability in appearance.
+
+     %\item \textbf{Contextual Understanding:} Future research may focus on enhancing the contextual understanding of violent behavior, taking into account factors such as environmental conditions, social dynamics, and situational context.
+
+     \item \textbf{Spectral Imaging:} Spectral imaging\cite{spectral_image} offers a unique set of capabilities for violence detection such as usage of the IR spectrum, allowing for the identification of weapons, bloodstains, chemical residues during very low lighting conditions, complete darkness, or even through obstacles.
+
+ 
+\end{itemize}
+
+\section{Limitations}
+While the project has made significant progress in addressing overfitting and improving computational efficiency for violence detection, there are several potential limitations to consider:
+\begin{itemize}
+
+      \item\textbf{Generalization:} Despite efforts to reduce overfitting, there may still be instances where the model fails to generalize well to unseen data or variations in real-world scenarios. This could lead to misclassifications or reduced accuracy in certain situations.
+     
+     \item\textbf{Resource Constraints:} While the model aims to be computationally efficient, it may still require a certain level of processing power and memory, which could be prohibitive for deployment on extremely resource-constrained edge devices.
+    
+     \item\textbf{Scope Limitation:} While your model excels in detecting physical violence, it may not be equipped to identify other forms of violence, such as weaponized violence
+    
+    \item\textbf{Environmental Factors:} Variations in lighting conditions, camera angles, and environmental clutter (e.g., crowded spaces, occlusions) may impact the model's performance, leading to decreased accuracy or increased false positives/negatives in violence detection. 
+\end{itemize}
+
+\newpage
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[scale=0.5]{1s.png}
+%\caption{Registration page.}
+
+%\centering
+%\includegraphics[scale=0.5]{2s.png}
+%\caption{Profile and Settings.}
+%\end{figure}
+%\newpage
+%\begin{figure}[h]
+%\centering
+%\includegraphics[scale=0.8]{3s.png}
+%\caption{Dashboard.}
+
+%\end{figure}
+
+\lfoot{\textit{Departmant of Artificial Intelligence and Data Science, SJCET Palai}}
+\renewcommand{\footrulewidth}{0.4pt}
