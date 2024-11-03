@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   This is frontpage.tex file needed for the dmathesis.cls file.  You   %
+%  have to  put this file in the same directory with your thesis files.  %
+%            
+% 
+%                 No Copyright for this file                             % 
+%                 Save your time and enjoy it                            % 
+%                                                                        % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%           The title page           %%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{roman}
+%\pagenumbering{arabic}
+
+\setcounter{page}{1}
+
+\fancypagestyle{plain}{%
+\fancyfoot[L]{\emph{Department of Artificial Intelligence and Data Science, SJCET Palai}} % except the center
+\fancyfoot[R]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+}
+
+\newpage
+
+\thispagestyle{empty}
+\begin{center}
+ 
+{\normalsize \bf SEMINAR REPORT}\\
+ON\\
+\vspace*{0.2 cm}
+{\huge \bf KAN: Kolmogorov–Arnold Networks}\\ 
+\vspace{2mm}
+
+   \vspace{0.5 cm}
+   \large Submitted by\\
+   { \bf Rajat Sandeep Sen (SJC21AD051)}\\[-0.6mm]
+  {\large to\\[-0.6mm] the APJ Abdul Kalam Technological University\\[-0.6mm] in partial fulfillment of the requirements for the award of the degree\\[-0.6mm] of\\[-0.6mm] Bachelor of Technology\\[-0.6mm] in\\[-0.6mm] {\bf Artificial Intelligence and Data Science}}
+  %\vspace*{1cm}
+  
+  % Put your university logo here if you wish.
+   \begin{center}
+   \includegraphics[width=0.3\textwidth]{Images/SJCET_logo.png}
+   \end{center}
+   \vspace*{-0.5cm}
+  {\LARGE {\bf Department of Artificial Intelligence and Data Science}}\\
+          [-3mm] {\large {\bf St. Joseph's College of Engineering and Technology, Palai}\\
+           [1mm] NOVEMBER : 2024}
+
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%           The abstract page         %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% The dedication page, of you have one  %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\numberline{}Certificate}
+\begin{center}
+\normalsize{ST. JOSEPH’S COLLEGE OF ENGINEERING AND TECHNOLOGY, PALAI}\\[0.5cm]
+\normalsize
+ { DEPARTMENT OF ARTIFICIAL INTELLIGENCE AND DATA SCIENCE}\\[1.0cm]% Put your university logo here if you wish.
+   \begin{center}
+   \includegraphics[width=0.3\textwidth]{Images/SJCET_logo.png}
+   \end{center}
+{\large CERTIFICATE}\\[1.5cm]
+\end{center}
+\normalsize 
+This is to certify that the seminar report entitled {\textbf{KAN: Kolmogorov–Arnold \\ Networks}} submitted by { \bf Rajat Sandeep Sen (SJC21AD051)} to the APJ Abdul Kalam Technological University in partial fulfillment of the requirements for the award of the Degree of Bachelor of Technology in Artificial Intelligence and Data Science is a bonafide record of the seminar carried out by them under my guidance and supervision.\vspace{1.3 cm}\\
+{\bf Seminar Guide}\hspace{8.2 cm}{\bf Seminar Coordinator}\\
+Guide Name\hspace{9.0 cm}Dr. Renjith Thomas\\
+Guide Designation\hspace{7.85 cm}Associate Professor\hspace{2.6 cm}\\Department of AD\hspace{7.9 cm}Department of AD
+\vspace{1.3 cm}\\
+\begin{minipage}[t]{0.5\textwidth}
+\begin{flushleft}
+\setlength{\leftskip}{0pt} % Adjust the left margin
+\vspace{0.2 cm}
+Place: Choondacherry \\
+Date: 04-11-2024
+\end{flushleft}
+\end{minipage}%
+\begin{minipage}[t]{0.49\textwidth}
+\begin{flushright}
+\begin{tabular}{l}
+\textbf{Head of Department} \\
+Dr. Renjith Thomas \\
+Associate Professor \\
+Department of AD
+\end{tabular}
+\end{flushright}
+\end{minipage}
+                
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\numberline{}Acknowledgement}
+\begin{center}
+  \vspace*{1cm}
+  \textbf{\large Acknowledgement}
+\end{center}
+I wish to record our indebtedness and thankfulness to all who helped us complete this seminar titled $"$KAN: Kolmogorov–Arnold Networks$"$. I would like to convey a special gratitude to Dr.~V.P. Devassia, Principal, SJCET, Palai, for the facilities. I express my sincere thankfulness to Dr. Renjith Thomas, Head of the department, Associate Professor \& seminar coordinator, Department of Artificial Intelligence \& Data Science for his cooperation and valuable suggestions with helpful feedback and timely assistance. I am especially thankful to him as my guide for giving me valuable suggestions and critical inputs through guidance and support. I also extend my thanks to college lab technicians, my friends, and others who directly or indirectly helped me during this seminar work.
+ \\
+\begin{flushright}
+Rajat Sandeep Sen
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%           The abstract page         %%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+\begin{center}
+  % \vspace*{0.5cm}
+  \textbf{\large Abstract}\\
+\end{center}
+  Inspired by the Kolmogorov-Arnold representation theorem, we propose KolmogorovArnold Networks (KANs) as promising alternatives to Multi-Layer Perceptrons (MLPs).
+While MLPs have fixed activation functions on nodes (“neurons”), KANs have learnable
+activation functions on edges (“weights”). KANs have no linear weights at all – every
+weight parameter is replaced by a univariate function parametrized as a spline. We show
+that this seemingly simple change makes KANs outperform MLPs in terms of accuracy
+and interpretability, on small-scale AI + Science tasks. For accuracy, smaller KANs can
+achieve comparable or better accuracy than larger MLPs in function fitting tasks. Theoretically and empirically, KANs possess faster neural scaling laws than MLPs. For interpretability, KANs can be intuitively visualized and can easily interact with human users.
+Through two examples in mathematics and physics, KANs are shown to be useful “collaborators” helping scientists (re)discover mathematical and physical laws. In summary, KANs
+are promising alternatives for MLPs, opening opportunities for further improving today’s
+deep learning models which rely heavily on MLPs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%    tableofcontents, listoffigures and listoftables       %%%%%%%%%
+%%%%%%%%        Command if you do not have  them                  %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\tableofcontents
+\printnomenclature
+\thispagestyle{empty}
+\listoffigures
+\listoftables
+\newpage
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%   END OF FRONT PAGE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

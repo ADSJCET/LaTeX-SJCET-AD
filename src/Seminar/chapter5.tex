@@ -1,0 +1,50 @@
+\chapter{Conclusion}
+
+While Kolmogorov-Arnold Networks (KAN) and their extension, MultiKAN, present an intriguing, interpretable approach to machine learning, they currently face substantial hurdles that cloud their potential compared to more established models like Multilayer Perceptrons (MLPs). Despite their theoretical strengths in scientific applications, KANs are hindered by slow training speeds, limited scalability, and a pronounced susceptibility to overfitting, particularly when handling real-world, noisy data. These issues not only impact efficiency but also dampen AI developers' confidence in deploying KAN models on a practical scale.
+
+MLPs, by contrast, remain the standard choice for many applications due to their faster training times, established benchmarks, and robust performance across diverse domains. The lack of widespread interest in KAN and MultiKAN models reflects a field hesitant to invest in models where potential performance gains are offset by longer training times and complex optimization challenges. To gain traction, research must focus on developing new techniques that improve training efficiency and optimize interpretability at scale. Until then, the adoption of KAN models remains limited, and their future as mainstream alternatives to MLPs is uncertain. For KANs to carve out a significant role in AI, they will need to overcome these limitations and prove their value in real-world settings.
+
+\clearpage
+
+\section{Future Scope}
+
+Kolmogorov-Arnold Networks (KANs) present a promising yet complex future in interpretable machine learning, especially for scientific and specialized domains. While the potential applications are vast, several challenges remain that must be addressed to realize KANs' full capabilities.
+\begin{itemize} 
+    \item Improving Computational Efficiency: KANs currently suffer from slow training speeds due to their complex architecture, which involves learning individual 1D spline functions. Future research into optimized architectures, alternative activation functions, and more efficient training algorithms could reduce computational demands. However, even with these advances, achieving parity with the speed of MLPs may remain challenging, potentially limiting KANs’ feasibility for real-time and large-scale applications.
+    \item Scalability vs. Interpretability: KANs are praised for their interpretability in small models, but this advantage often diminishes as model size and complexity grow. Future developments in interpretability methods are necessary to ensure that KANs maintain their clarity at larger scales. Nonetheless, balancing scalability with interpretability might be difficult, and the complexity of interactions in large KAN models could limit their accessibility for end-users without advanced knowledge.
+    \item Mitigating Overfitting Risks: KANs' focus on fitting specific 1D functions makes them vulnerable to overfitting, especially on noisy datasets. Improved regularization techniques and adaptive architectural choices will be critical for robust model generalization. However, given the high sensitivity to input variations, achieving a stable balance between accuracy and generalization may still prove elusive, potentially affecting their reliability in varied real-world applications.
+    \item Sequential Data Limitations: Although KANs have shown promise in static datasets, their capabilities for sequential data, such as time series and language modeling, are not yet well-established. Exploring KANs' applicability to sequential data will involve significant research into adapting their architecture to capture temporal relationships. However, due to the spline-based functions, capturing dependencies over time might introduce new inefficiencies, making it challenging to compete with more established models in this domain.
+    \item Complexity in Integrating Domain Knowledge: One of KANs’ strengths is the ability to incorporate scientific knowledge and modular constraints directly into their structure. However, encoding complex, domain-specific knowledge can be challenging and may require domain expertise, which could limit their accessibility to broader audiences or researchers outside specific scientific fields.
+    \item Symbolic Regression and Complexity: While KANs show promise in symbolic regression for extracting mathematical representations, generating accurate and interpretable formulas from complex models remains a technical hurdle. As KANs scale, the symbolic complexity might increase, making it difficult to produce concise and usable mathematical expressions from larger models.
+    \item Establishing Benchmarks and Fair Comparisons: Comparisons with MLPs often highlight KANs’ strengths in interpretability, but there is a need for standardized benchmarks to fairly evaluate their performance across domains. This process is essential to understand their unique benefits and trade-offs. However, KANs may continue to face challenges in areas where MLPs are deeply entrenched, such as computer vision, NLP, and high-speed processing tasks, which could limit their general adoption.
+\end{itemize}
+The future of KANs involves navigating both their exciting potential and inherent limitations. As research progresses, KANs could become a preferred tool for scientific discovery and specialized fields where interpretability and modularity are crucial. However, overcoming these challenges will be essential to broaden KANs’ applications and establish them as a viable alternative to mainstream machine learning models like MLPs.
+\clearpage
+
+\section{Limitations}
+
+\begin{itemize}
+    \item Slow Training Speed: KANs are significantly slower to train than MLPs due to the complexity of learning individual 1D spline functions for each activation. This inefficiency hampers their applicability for large-scale datasets or time-sensitive applications.
+    
+    \item Limited Batch Processing: Unlike MLPs, KANs cannot fully leverage batch computation because each activation function operates on a single data element, restricting parallel processing capabilities and further slowing training.
+    
+    \item Decreasing Interpretability at Scale: While KANs are highly interpretable in small models, their clarity diminishes as the model size increases, making it difficult to extract meaningful insights from larger, more complex models.
+    
+    \item Overfitting Susceptibility: KANs are prone to overfitting, especially with noisy real-world data, due to their focus on accurately fitting individual 1D functions. This sensitivity requires careful regularization, but even so, they may struggle to generalize in varied environments.
+    
+    \item Limited Applicability to Sequential Data: KANs are primarily effective for static data and have limited exploration and adaptation for sequential data tasks like time series or language processing, where capturing temporal dependencies is crucial.
+    
+    \item Complexity in Encoding Domain Knowledge: While KANs can integrate domain-specific knowledge, doing so is often challenging and may require significant expertise. This complexity can limit the accessibility of KANs to broader audiences and restrict their use to specific scientific applications.
+    
+    \item Challenges with Symbolic Regression in Large Models: Although KANs support symbolic regression, generating concise, usable symbolic representations from large-scale models is complex and can lead to intricate formulas that are difficult to interpret or use.
+    
+    \item Dependence on New Interpretability Techniques: Existing interpretability methods are often inadequate for large or complex KANs, meaning that new, sophisticated techniques are required to unlock KANs' full potential, adding another layer of technical development.
+    
+    \item Lack of Established Best Practices: The relatively young field of KANs lacks standardized guidelines for model design, activation function selection, and training protocols, making their adoption more challenging and unpredictable compared to well-established models like MLPs.
+    
+    \item Potential for Local Minima in Optimization: The spline functions in KANs can introduce multiple local minima, complicating the optimization process and leading to suboptimal solutions if not handled carefully.
+    
+    \item Mixed Empirical Evidence for Superiority: While KANs show strengths in certain tasks, studies reveal mixed results, with some experiments indicating that carefully optimized MLPs can match or exceed KANs' performance, raising questions about KANs' general advantages.
+\end{itemize}
+
+KANs bring a unique set of capabilities, but these limitations highlight the technical and practical challenges that must be addressed for KANs to become a more widely adopted alternative to conventional machine learning models.
